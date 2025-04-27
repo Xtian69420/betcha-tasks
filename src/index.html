@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betcha-Task</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Betcha-Task</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="https://apis.google.com/js/client.js"></script>
 </head>
-<body>
-    
+<body class="p-4">
+  <div class="container">
+    <h1 class="mb-4">Betcha Task Manager</h1>
+
+    <button id="addTaskBtn" class="btn btn-primary mb-3">Add Task</button>
+
+    <div id="taskForm" class="card p-3 mb-4" style="display: none;">
+      <div class="mb-3">
+        <label class="form-label">Task Title</label>
+        <input type="text" id="taskTitle" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Who</label>
+        <select id="taskWho" class="form-select">
+          <option value="">Select Person</option>
+          <option value="Cianha">Cianha</option>
+          <option value="Christian">Christian</option>
+          <option value="Luke">Luke</option>
+          <option value="Mark">Mark</option>
+          <option value="All">All</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" id="taskDesc" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Status</label>
+        <select id="taskStatus" class="form-select">
+          <option value="Pending">Pending</option>
+          <option value="Finished">Finished</option>
+        </select>
+      </div>
+      <button id="saveTaskBtn" class="btn btn-success">Save</button>
+      <button id="cancelTaskBtn" class="btn btn-secondary">Cancel</button>
+    </div>
+
+    <div class="accordion" id="taskAccordion">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
